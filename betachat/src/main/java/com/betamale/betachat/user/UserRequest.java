@@ -19,7 +19,7 @@ public class UserRequest {
             @NotEmpty(message = "패스워드는 비어있으면 안됩니다.")
             @Size(min = 8, max = 20, message = "패스워드는 8에서 20자 이내여야 합니다.")
             @Pattern(regexp = "^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[@#$%^&+=!~`<>,./?;:'\"\\[\\]{}\\\\()|_-])\\S*$", message = "영문, 숫자, 특수문자가 포함되어야하고 공백이 포함될 수 없습니다.")
-            String password,
+            String password
 
             ){
         public User toUserEntity(String encodedPassword) {
